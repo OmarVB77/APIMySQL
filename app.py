@@ -16,6 +16,11 @@ def sqlserver_endpoint():
     data = get_sqlserver_data()
     return jsonify(data)
 
+@app.route('/mysql', methods=['GET'])
+def mysql_endpoint():
+    data = get_mysql_data()
+    return jsonify(data)
+
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 5000))
